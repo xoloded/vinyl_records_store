@@ -1,0 +1,11 @@
+﻿@model HomePageViewModel
+<br />
+<h1>Популярные виниловые пластинки</h1>
+<div class="row mt-5 mb-2">
+	@{
+		foreach (var vinylRecord in Model.FavoriteVinylRecords)
+		{
+			@Html.Partial("AllVinylRecords", vinylRecord);
+		}
+	}
+</div>

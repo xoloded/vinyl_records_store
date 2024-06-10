@@ -1,0 +1,12 @@
+﻿@model VinylRecord
+
+<div class="col-lg-4">
+	<img class="img-thumbnail" src="@Model.Image" alt="@Model.Album" />
+	<h3>Артист: @Model.Singer</h3>
+	<h3>Альбом: @Model.Album</h3>
+	Год выпуска альбома: @Model.YearOfRelease<br>
+	Описание: @Model.Description<br>
+	Цена: @Model.Price.ToString()₽
+	<p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToShopCart" asp-route-id="@Model.Id">Добавить в корзину</a></p>
+	<p><a class="btn btn-link" asp-controller="VinylRecords" asp-action="ViewItem" asp-route-id="@Model.Id">Подробнее</a></p>
+</div>

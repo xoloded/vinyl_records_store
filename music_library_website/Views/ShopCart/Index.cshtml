@@ -1,0 +1,23 @@
+﻿@model ShopCartViewModel
+<br />
+<div class="container mt-5">
+	@{
+		if (Model.ShopCart.ListShopItems.Any())
+		{
+			foreach (var vinylRecord in Model.ShopCart.ListShopItems)
+			{
+				<div class="alert alert-warning mt-3">
+					<b>Артист:</b> @vinylRecord.VinylRecord.Singer<br />
+					<b>Альбом:</b> @vinylRecord.VinylRecord.Album<br />
+					<b>Цена:</b> @vinylRecord.VinylRecord.Price.ToString()₽
+				</div>
+			}
+			<hr />
+			<a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+		}
+		else
+		{
+			<h1>Корзина пуста</h1>
+		}
+	}
+</div>

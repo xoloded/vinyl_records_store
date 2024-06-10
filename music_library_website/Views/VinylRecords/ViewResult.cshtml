@@ -1,0 +1,12 @@
+﻿@model VinylRecordListViewModel
+
+<h1>Все виниловые пластинки</h1>
+<h3>@Model.CurrentCategory</h3>
+<div class="row mt-5 mb-2">
+	@{
+		foreach(VinylRecord vinylRecord in Model.AllVinylRecords)
+		{
+			@Html.Partial("AllVinylRecords", vinylRecord);
+		}
+	}
+</div>

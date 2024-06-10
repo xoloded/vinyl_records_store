@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/CustomStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Магазин виниловых пластинок</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/VinylRecords/ViewResult">Весь каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/VinylRecords/ViewResult/Rock">Рок</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/VinylRecords/ViewResult/Pop">Поп</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/VinylRecords/ViewResult/HipHop">Хип Хоп</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/ShopCart">Корзина</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-1" type="search" placeholder="Поиск по пластинкам" aria-label="Поиск по пластинкам">
+                    <button class="btn btn-outline-primary" type="submit">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <div class="container mt-5">
+        @RenderBody()
+    </div>
+    <br />
+    <hr />
+    <footer class="container">
+        <p class="text-center">© 2024 Все права защищены (наверно)</p>
+    </footer>
+    <script src="~js/bootstrap.min.js"></script>
+</body>
+</html>

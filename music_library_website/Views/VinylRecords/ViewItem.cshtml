@@ -1,0 +1,34 @@
+﻿@model VinylRecord
+
+
+<div class="row mt-5 mb-2">
+	<div class="col-lg-4">
+		@{
+			<img class="img-thumbnail" src="@Model.Image" alt="@Model.Album" />
+		
+		}
+	</div>
+	<div class="col-lg-4">
+		@{
+				<h2>@Model.Singer</h2>
+				<h2>@Model.Album</h2>
+				<hr/>
+				<small>Год выпуска альбома: @Model.YearOfRelease</small><br>
+				<small>Описание: @Model.Description</small><br> 
+				<small>Цена: @Model.Price₽</small><br> 
+				<small>Жанр: @Model.Category.TypesOfMusic</small><br> 
+				<small>Наличие: @Model.Available</small><br> 
+				<hr/>
+				<p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToShopCart" asp-route-id="@Model.Id">Добавить в корзину</a></p>
+		}
+	</div>
+</div>
+@* <div class="row mt-5 mb-2">
+	@{
+		foreach (VinylRecord vinylRecord in Model.AllVinylRecords)
+		{
+			@Html.Partial("AllVinylRecords", vinylRecord)
+			;
+		}
+	}
+</div> *@
