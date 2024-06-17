@@ -8,12 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-//я прописал
+//пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 builder.Services.AddDbContext<AppDBContext>(e => e.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=VinylRecordsShop;Trusted_Connection=True;"));
 builder.Services.AddTransient<IAllVinylRecords, VinylRecordRepository>();
 builder.Services.AddTransient<IAllVinylRecordsCategory, CategoryRepository>();
 builder.Services.AddTransient<IAllOrders, OrdersRepository>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();  //сервис сервисов
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();  //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 builder.Services.AddScoped(sp => ShopCart.GetShopCart(sp));
 builder.Services.AddMvc(option => option.EnableEndpointRouting = false);
 builder.Services.AddMemoryCache();
@@ -31,7 +31,7 @@ if (!app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
-//я прописал
+// I write
 app.UseDeveloperExceptionPage();
 app.UseStatusCodePages();
 app.UseSession();
