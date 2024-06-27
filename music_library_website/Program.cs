@@ -52,3 +52,4 @@ app.UseMvc(routes =>
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.Run();
+Console.WriteLine("v2");
